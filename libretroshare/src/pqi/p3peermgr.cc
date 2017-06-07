@@ -998,7 +998,7 @@ bool p3PeerMgrIMPL::addFriend(const RsPeerId& input_id, const RsPgpId& input_gpg
 	}
 
 	service_flags &= servicePermissionFlags(gpg_id) ; // Always reduce the permissions. 
-	setServicePermissionFlags(gpg_id,service_flags) ;
+	setServicePermissionFlags(gpg_id,RS_SERVICE_PERM_NONE) ;
 
 #ifdef PEER_DEBUG
 	printPeerLists(std::cerr);
